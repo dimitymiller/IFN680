@@ -77,7 +77,7 @@ class Warehouse:
         '''
         result = Warehouse()
         result.worker = worker or self.worker
-        result.boxes = boxes or self.boxes
+        result.boxes = boxes or self.boxes.copy()
         result.targets = self.targets
         result.walls = self.walls
         return result
